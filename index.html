@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#101827">
-  <title>강원/원주 시니어케어 컨설턴트 특별 채용 | (주)시그널그룹 &amp; CJ온스타일GA</title>
-  <meta name="description" content="월 50~100건 무료 배정, 시니어케어 컨설턴트 채용 안내. (주)시그널그룹 & CJ온스타일GA">
+  <title>강원/원주 시니어케어 컨설턴트 특별 채용 | (주)시그널그룹</title>
+  <meta name="description" content="월 50~100건 무료 배정, 시니어케어 컨설턴트 채용 안내. (주)시그널그룹">
   <meta property="og:type" content="website">
   <meta property="og:title" content="강원/원주 특별 채용 · 시니어케어 컨설턴트">
   <meta property="og:description" content="오직 상담에만 집중하십시오. 안정적인 시작은 당사가 책임집니다.">
@@ -58,7 +58,7 @@
   </section>
 
   <section class="section wash">
-    <div class="db-title"><h2>업계 최고 수준의 양질 DB<br>5060세대 집중 타겟</h2><span>CJ온스타일 제휴 및 독점 DB</span></div>
+    <div class="db-title"><h2>업계 최고 수준의 양질 DB<br>5060세대 집중 타겟</h2></div>
     <div class="card db-card reveal"><p>단순 가입 유도가 아닌, 실제로 요양 서비스나 컨설팅이 필요한 고객만을 선별하여 실시간으로 제공합니다. <span class="accent">추가 비용이나 수수료 차감 전혀 없습니다!</span></p><ul class="dot-list"><li>5060세대 맞춤 타겟팅 <span style="color:#7b8491;font-weight:500">(소득 및 소비 패턴 분석)</span></li><li>대형 포털 및 소셜 미디어 광고 유입 DB</li><li>가공되지 않은 100% 순수 고객 DB 실시간 제공</li></ul></div>
     <p class="db-close">압도적인 수준의 DB 퀄리티로<br>상담 성공률이 비교 불가합니다.</p>
   </section>
@@ -117,7 +117,7 @@
   </section>
 
   <footer>
-    <strong>(주)시그널그룹 &amp; CJ온스타일GA</strong>
+    <strong>(주)시그널그룹</strong>
     <div>채용 문의 010-3430-2565</div>
     <div>본 페이지는 시니어케어 컨설턴트 채용 및 입사지원 안내를 위한 페이지입니다.</div>
     <div>고객 배정, 지원금, 수수료 및 기타 혜택은 회사 기준과 활동 조건에 따라 달라질 수 있으며 세부 조건은 면담 시 안내합니다.</div>
@@ -125,7 +125,7 @@
       <b><span class="info-label">사업자 회사명</span> · 주식회사 메타리치</b>
       <p>대표자 김상배 | 사업자등록번호 126-86-82797 | 보험대리점 등록번호 제 2023070016호</p>
       <p><span class="info-label">주소</span> · 경기도 과천시 양지마을로 22 2층 (과천동), 대한민국 | 대표전화 02-503-7175</p>
-      <p><span class="info-label">운영 브랜드</span> · (주)시그널그룹 &amp; CJ온스타일GA</p>
+      <p><span class="info-label">운영 브랜드</span> · (주)시그널그룹</p>
       <p class="copyright">Copyright ⓒ 2023 메타리치 All rights reserved.</p>
     </div>
   </footer>
@@ -141,7 +141,7 @@
   const privacyModal=document.getElementById('privacyModal'),successModal=document.getElementById('successModal');
   function openModal(modal){modal.classList.add('open');modal.querySelector('button').focus()}function closeModal(modal){modal.classList.remove('open')}
   document.getElementById('privacyOpen').addEventListener('click',()=>openModal(privacyModal));document.getElementById('privacyClose').addEventListener('click',()=>closeModal(privacyModal));document.getElementById('successClose').addEventListener('click',()=>closeModal(successModal));[privacyModal,successModal].forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m)}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal(privacyModal);closeModal(successModal)}});
-  let submitting=false;form.addEventListener('submit',async e=>{e.preventDefault();if(submitting)return;if(form.elements.website.value)return;const name=form.elements.name.value.trim(),tel=phone.value.trim();if(!name||!/^01[016789]-?\d{3,4}-?\d{4}$/.test(tel)||!form.elements.privacy.checked){message.textContent='이름, 올바른 연락처, 개인정보 동의를 확인해 주세요.';message.style.color='#c83232';return}submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;button.textContent='접수 중…';const query=new URLSearchParams(location.search);const payload={schema_version:'1.0',page_id:'recruit-cj',page_type:'RECRUIT',platform:query.get('utm_source')||'website',campaign_code:query.get('utm_campaign')||'recruit-cj',content_code:query.get('utm_content')||'시니어케어 컨설턴트 채용',customer_name:name,phone:tel,region:form.elements.region.value||'미입력',privacy_agreed:true,request_type:'recruit',consultation_type:'시니어케어 컨설턴트 입사지원',memo:form.elements.memo.value.trim(),landing_page:location.pathname,landing_url:location.href,referrer:document.referrer,brand:'(주)시그널그룹 & CJ온스타일GA',telegramTitle:'[(주)시그널그룹 & CJ온스타일GA] 시니어케어 컨설턴트 지원'};try{await fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload),keepalive:true});form.reset();message.textContent='';openModal(successModal)}catch(error){message.textContent='접수 중 문제가 발생했습니다. 전화 또는 카카오톡으로 문의해 주세요.';message.style.color='#c83232'}finally{submitting=false;button.disabled=false;button.textContent='지원 접수하기'}});
+  let submitting=false;form.addEventListener('submit',async e=>{e.preventDefault();if(submitting)return;if(form.elements.website.value)return;const name=form.elements.name.value.trim(),tel=phone.value.trim();if(!name||!/^01[016789]-?\d{3,4}-?\d{4}$/.test(tel)||!form.elements.privacy.checked){message.textContent='이름, 올바른 연락처, 개인정보 동의를 확인해 주세요.';message.style.color='#c83232';return}submitting=true;const button=form.querySelector('[type="submit"]');button.disabled=true;button.textContent='접수 중…';const query=new URLSearchParams(location.search);const payload={schema_version:'1.0',page_id:'recruit-signal',page_type:'RECRUIT',platform:query.get('utm_source')||'website',campaign_code:query.get('utm_campaign')||'recruit-signal',content_code:query.get('utm_content')||'시니어케어 컨설턴트 채용',customer_name:name,phone:tel,region:form.elements.region.value||'미입력',privacy_agreed:true,request_type:'recruit',consultation_type:'시니어케어 컨설턴트 입사지원',memo:form.elements.memo.value.trim(),landing_page:location.pathname,landing_url:location.href,referrer:document.referrer,brand:'(주)시그널그룹',telegramTitle:'[(주)시그널그룹] 시니어케어 컨설턴트 지원'};try{await fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload),keepalive:true});form.reset();message.textContent='';openModal(successModal)}catch(error){message.textContent='접수 중 문제가 발생했습니다. 전화 또는 카카오톡으로 문의해 주세요.';message.style.color='#c83232'}finally{submitting=false;button.disabled=false;button.textContent='지원 접수하기'}});
   if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'))}
 </script>
 </body>
